@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greece in WWII | The Greek Civil War (1944-1949)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B0000',secondary:'#4A4A4A'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Source Serif 4', serif;
+color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+@keyframes fade-in-down {
+from {
+opacity: 0;
+transform: translateY(-1rem);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.animate-fade-in-down {
+animation: fade-in-down 0.3s ease-out;
+}
+.timeline-item.active::after {
+content: '';
+position: absolute;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+width: 10px;
+height: 10px;
+background-color: #8B0000;
+border-radius: 50%;
+}
+.timeline-item::before {
+content: '';
+position: absolute;
+bottom: -6px;
+left: 50%;
+transform: translateX(-50%);
+width: 6px;
+height: 6px;
+background-color: #4A4A4A;
+border-radius: 50%;
+}
+.hero-parallax {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.search-input:focus {
+outline: none;
+}
+.document-card:hover .zoom-icon {
+opacity: 1;
+}
+input[type="range"]::-webkit-slider-thumb {
+appearance: none;
+width: 16px;
+height: 16px;
+background: #8B0000;
+border-radius: 50%;
+cursor: pointer;
+}
+.custom-checkbox {
+display: inline-block;
+position: relative;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 18px;
+width: 18px;
+background-color: #eee;
+border: 1px solid #ccc;
+}
+.custom-checkbox:hover input ~ .checkmark {
+background-color: #ccc;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #8B0000;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #8B0000;
+}
+input:checked + .slider:before {
+transform: translateX(24px);
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header Section -->
+<header class="bg-gray-900 text-white sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<div class="flex items-center space-x-6">
+<h1 class="text-2xl font-bold tracking-wider">Greece in WWII</h1>
+<nav class="hidden md:flex">
+<ul class="flex space-x-6">
+<li><a href="https://readdy.ai/home/a87647db-1585-40a2-a5f1-1ac90bafbd4b/765bf137-1076-4a38-827a-44e399086c3a" data-readdy="true" class="hover:text-primary pb-1">Pre-war</a></li>
+<li><a href="https://readdy.ai/home/a87647db-1585-40a2-a5f1-1ac90bafbd4b/765bf137-1076-4a38-827a-44e399086c3a" data-readdy="true" class="hover:text-primary pb-1">Italian War</a></li>
+<li><a href="https://readdy.ai/home/a87647db-1585-40a2-a5f1-1ac90bafbd4b/765bf137-1076-4a38-827a-44e399086c3a" data-readdy="true" class="hover:text-primary pb-1">German Occupation</a></li>
+<li><a href="https://readdy.ai/home/a87647db-1585-40a2-a5f1-1ac90bafbd4b/765bf137-1076-4a38-827a-44e399086c3a" data-readdy="true" class="hover:text-primary pb-1">Resistance</a></li>
+<li><a href="#" class="hover:text-primary border-b-2 border-primary pb-1">Civil War</a></li>
+</ul>
+</nav>
+</div>
+<div class="relative">
+<input type="text" class="bg-gray-800 rounded-full py-2 pl-10 pr-4 text-sm search-input border-none" placeholder="Search historical events...">
+<div class="absolute left-3 top-2.5 w-4 h-4 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[500px] hero-parallax" style="background-image: url('https://readdy.ai/api/search-image?query=A%2520powerful%2520black%2520and%2520white%2520historical%2520photograph%2520showing%2520the%2520Greek%2520Civil%2520War%2520%281944-1949%29%2520with%2520dramatic%2520lighting%2520and%2520composition.%2520The%2520image%2520should%2520capture%2520conflict%2520between%2520government%2520forces%2520and%2520communist%2520guerrillas%2520in%2520rural%2520Greek%2520mountains%252C%2520with%2520soldiers%2520in%2520period-appropriate%2520uniforms.%2520The%2520photograph%2520should%2520have%2520a%2520vintage%252C%2520documentary%2520style%2520with%2520high%2520contrast%2520and%2520film%2520grain%2520texture%252C%2520showing%2520the%2520devastation%2520and%2520division%2520of%2520the%2520civil%2520conflict.&width=1920&height=1080&seq=19&orientation=landscape');">
+<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+<div class="container mx-auto px-4 h-full flex items-center relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block bg-primary text-white px-4 py-1 text-sm font-semibold mb-4">1944-1949: The Greek Civil War</span>
+<h2 class="text-5xl font-bold text-white mb-6 leading-tight">A Nation Divided: The Struggle That Shaped Modern Greece</h2>
+<p class="text-xl text-gray-100 mb-8">As World War II ended, Greece descended into a bitter civil conflict between government forces and communist guerrillas that would determine the country's political future for decades to come.</p>
+<button class="bg-white text-gray-900 px-6 py-3 font-semibold hover:bg-gray-200 transition !rounded-button whitespace-nowrap">Explore the Timeline</button>
+</div>
+</div>
+</section>
+<!-- Timeline Navigation -->
+<section class="bg-gray-100 border-b border-gray-200 sticky top-16 z-40">
+<div class="container mx-auto px-4 py-6">
+<div class="relative">
+<div class="h-1 bg-gray-300 absolute top-1/2 left-0 right-0 -translate-y-1/2"></div>
+<div class="flex justify-between relative">
+<div class="timeline-item relative text-center cursor-pointer">
+<span class="block text-sm font-semibold mb-2">1936-1940</span>
+<span class="block text-xs text-gray-600">Pre-war</span>
+</div>
+<div class="timeline-item relative text-center cursor-pointer">
+<span class="block text-sm font-semibold mb-2">1940-1941</span>
+<span class="block text-xs text-gray-600">Italian War</span>
+</div>
+<div class="timeline-item relative text-center cursor-pointer">
+<span class="block text-sm font-semibold mb-2">1941-1944</span>
+<span class="block text-xs text-gray-600">German Occupation</span>
+</div>
+<div class="timeline-item relative text-center cursor-pointer">
+<span class="block text-sm font-semibold mb-2">1942-1944</span>
+<span class="block text-xs text-gray-600">Resistance</span>
+</div>
+<div class="timeline-item active relative text-center cursor-pointer">
+<span class="block text-sm font-semibold mb-2 text-primary">1944-1949</span>
+<span class="block text-xs text-gray-600">Civil War</span>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-between">
+<div class="flex space-x-4">
+<button class="flex items-center space-x-2 bg-white border border-gray-300 px-4 py-2 rounded-full text-sm !rounded-button whitespace-nowrap">
+<span>All Events</span>
+<i class="ri-arrow-down-s-line"></i>
+</button>
+<button class="flex items-center space-x-2 bg-white border border-gray-300 px-4 py-2 rounded-full text-sm !rounded-button whitespace-nowrap">
+<span>Filter by Region</span>
+<i class="ri-arrow-down-s-line"></i>
+</button>
+</div>
+<div class="flex items-center space-x-3">
+<span class="text-sm text-gray-600">View:</span>
+<button class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded">
+<i class="ri-layout-2-line"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-white border border-gray-300 rounded">
+<i class="ri-list-check"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Section -->
+<section class="py-12">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row gap-8">
+<!-- Left Column: Main Content -->
+<div class="md:w-2/3">
+<article class="bg-white rounded-lg shadow-sm p-8 mb-8">
+<h2 class="text-3xl font-bold mb-6">Origins of the Greek Civil War</h2>
+<p class="text-lg mb-6">The Greek Civil War emerged from the power vacuum created by the withdrawal of Axis forces in 1944. During the Nazi occupation, various resistance groups had formed, with the communist-led National Liberation Front (EAM) and its military wing, the Greek People's Liberation Army (ELAS), becoming the largest and most effective. As liberation approached, tensions grew between EAM-ELAS and other resistance groups supported by the Greek government-in-exile and the British.</p>
+<div class="my-8">
+<img src="https://readdy.ai/api/search-image?query=Black%2520and%2520white%2520historical%2520photograph%2520showing%2520communist%2520ELAS%2520fighters%2520in%2520Athens%2520during%2520the%2520December%2520Events%2520of%25201944.%2520The%2520image%2520shows%2520armed%2520guerrilla%2520fighters%2520with%2520rifles%2520in%2520urban%2520settings%2520with%2520damaged%2520buildings.%2520The%2520fighters%2520wear%2520a%2520mix%2520of%2520civilian%2520clothes%2520and%2520military%2520items%2520with%2520some%2520wearing%2520armbands.%2520The%2520photograph%2520has%2520authentic%2520period%2520details%2520with%2520a%2520documentary%2520style%252C%2520high%2520contrast%2520and%2520film%2520grain%2520texture%2520showing%2520the%2520tension%2520and%2520urban%2520conflict.&width=800&height=500&seq=20&orientation=landscape" alt="ELAS fighters in Athens, December 1944" class="w-full h-auto rounded-lg mb-2">
+<p class="text-sm text-gray-600 italic">Communist ELAS fighters in Athens during the December Events of 1944, the first phase of the civil war.</p>
+</div>
+<h3 class="text-2xl font-bold mb-4">The December Events (Dekemvriana)</h3>
+<p class="mb-6">The first major confrontation of the civil war occurred in December 1944, just weeks after German withdrawal. When the government of George Papandreou, backed by British forces, demanded the disarmament of all resistance groups, ELAS refused to surrender their weapons while right-wing militias remained armed. On December 3, 1944, a peaceful EAM demonstration in Athens' Syntagma Square turned violent when police opened fire on the crowd, killing several protesters.</p>
+<p class="mb-6">This incident triggered a full-scale battle for Athens between ELAS forces and British-backed government troops. The fighting lasted 33 days and resulted in thousands of casualties before a ceasefire was negotiated in January 1945. The Varkiza Agreement that followed required ELAS to disarm, but many fighters refused, retreating to the mountains to continue resistance.</p>
+<blockquote class="border-l-4 border-primary pl-4 italic my-6">
+<p class="text-lg">"In the wake of liberation, Greece was not experiencing peace, but the beginning of a new and more terrible war."</p>
+<cite class="text-sm block mt-2">— C.M. Woodhouse, British liaison officer to Greek resistance, 1948</cite>
+</blockquote>
+<p class="mb-6">The December Events marked a critical turning point, transforming what had been political tensions into armed conflict and setting the stage for the full-scale civil war that would follow.</p>
+</article>
+<article class="bg-white rounded-lg shadow-sm p-8 mb-8">
+<h2 class="text-3xl font-bold mb-6">Political Factions and International Involvement</h2>
+<p class="text-lg mb-6">The Greek Civil War was not simply an internal conflict but became a significant early battleground of the Cold War, with major powers supporting opposing sides.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+<div class="bg-gray-50 p-6 rounded-lg">
+<h4 class="text-xl font-bold mb-3 text-primary">Government Forces</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Greek National Army (GNA) - Formed from royalist and republican units</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>National Civil Guard - Local security forces in villages</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>X Organization - Right-wing paramilitary group</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Supported by the United Kingdom and later the United States</span>
+</li>
+</ul>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<h4 class="text-xl font-bold mb-3 text-primary">Communist Forces</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Democratic Army of Greece (DSE) - Military wing of the KKE</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Communist Party of Greece (KKE) - Political leadership</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Provisional Democratic Government - Rival government established in 1947</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Supported by Yugoslavia, Albania, and Bulgaria</span>
+</li>
+</ul>
+</div>
+</div>
+<h3 class="text-2xl font-bold mb-4">International Dimensions</h3>
+<p class="mb-6">By 1947, the United States had replaced Britain as the main foreign supporter of the Greek government. The Truman Doctrine, announced in March 1947, pledged American support to "free peoples resisting attempted subjugation by armed minorities or outside pressures" and was specifically created in response to the situation in Greece. This policy marked the beginning of the American strategy of containment against Soviet influence.</p>
+<div class="my-8">
+<img src="https://readdy.ai/api/search-image?query=Black%2520and%2520white%2520historical%2520photograph%2520showing%2520American%2520military%2520advisors%2520training%2520Greek%2520National%2520Army%2520soldiers%2520in%25201948.%2520The%2520image%2520shows%2520American%2520officers%2520in%2520uniform%2520demonstrating%2520weapons%2520or%2520tactics%2520to%2520Greek%2520soldiers%2520in%2520an%2520outdoor%2520training%2520area.%2520The%2520photograph%2520has%2520authentic%2520period%2520details%2520with%2520a%2520documentary%2520style%252C%2520high%2520contrast%2520and%2520film%2520grain%2520texture%2520showing%2520the%2520international%2520involvement%2520in%2520the%2520conflict.&width=800&height=500&seq=21&orientation=landscape" alt="American military advisors training Greek National Army, 1948" class="w-full h-auto rounded-lg mb-2">
+<p class="text-sm text-gray-600 italic">American military advisors training Greek National Army soldiers as part of the Truman Doctrine aid program, 1948.</p>
+</div>
+<p class="mb-6">Meanwhile, the communist insurgents received support from the newly established communist regimes in neighboring Yugoslavia, Albania, and Bulgaria. However, this support became complicated in 1948 when Yugoslavia under Tito broke with Stalin and the Soviet bloc. The Soviet Union itself provided limited direct aid to the Greek communists, as Greece had been acknowledged as within the Western sphere of influence in the percentages agreement between Stalin and Churchill in 1944.</p>
+</article>
+<article class="bg-white rounded-lg shadow-sm p-8">
+<h2 class="text-3xl font-bold mb-6">The Human Cost and Aftermath</h2>
+<p class="text-lg mb-6">The Greek Civil War was one of the most devastating conflicts in modern Greek history, with profound and long-lasting consequences for Greek society and politics.</p>
+<h3 class="text-2xl font-bold mb-4">Humanitarian Crisis</h3>
+<p class="mb-6">The civil war created a massive humanitarian crisis. An estimated 700,000 people were displaced from their homes, with many villages in rural areas completely destroyed. Both sides employed tactics that directly impacted civilians:</p>
+<ul class="list-disc pl-6 mb-6 space-y-2">
+<li>The government implemented a policy of forced evacuation of mountain villages to deny support to the guerrillas</li>
+<li>The DSE forcibly recruited fighters, including children who were sent to communist countries for "education"</li>
+<li>Thousands of political prisoners were held in detention camps on islands like Makronisos</li>
+<li>Food shortages affected much of the population, particularly in rural areas</li>
+</ul>
+<div class="my-8">
+<img src="https://readdy.ai/api/search-image?query=Black%2520and%2520white%2520historical%2520photograph%2520showing%2520Greek%2520refugee%2520families%2520displaced%2520by%2520the%2520civil%2520war%2520in%25201948.%2520The%2520image%2520shows%2520women%252C%2520children%2520and%2520elderly%2520people%2520with%2520their%2520belongings%2520being%2520evacuated%2520from%2520a%2520mountain%2520village%252C%2520looking%2520tired%2520and%2520distressed.%2520The%2520photograph%2520has%2520authentic%2520period%2520details%2520with%2520a%2520documentary%2520style%252C%2520high%2520contrast%2520and%2520film%2520grain%2520texture%2520capturing%2520the%2520humanitarian%2520crisis%2520of%2520the%2520conflict.&width=800&height=500&seq=22&orientation=landscape" alt="Displaced Greek families during the civil war, 1948" class="w-full h-auto rounded-lg mb-2">
+<p class="text-sm text-gray-600 italic">Families displaced from mountain villages during the government's population removal policy, 1948.</p>
+</div>
+<h3 class="text-2xl font-bold mb-4">The End of the Conflict</h3>
+<p class="mb-6">By 1949, the tide had turned decisively against the communist forces. The closure of the Yugoslav border following Tito's split with Stalin cut off a crucial supply route and sanctuary for DSE fighters. The Greek National Army, now well-equipped with American supplies and advised by U.S. military personnel, launched a series of major offensives in the summer of 1949.</p>
+<p class="mb-6">The final battle took place in the Grammos and Vitsi mountains near the Albanian border in August 1949. After heavy fighting, the remaining DSE forces retreated across the border into Albania. On October 16, 1949, the KKE radio announced a "temporary ceasefire," effectively ending the armed conflict.</p>
+<h3 class="text-2xl font-bold mb-4">Legacy and Long-term Impact</h3>
+<p class="mb-6">The civil war left deep scars in Greek society that would take decades to heal:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+<div class="bg-gray-50 p-6 rounded-lg">
+<h4 class="text-xl font-bold mb-3">Political Consequences</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<i class="ri-arrow-right-circle-line text-primary mr-2 mt-1"></i>
+<span>Establishment of strongly anti-communist state</span>
+</li>
+<li class="flex items-start">
+<i class="ri-arrow-right-circle-line text-primary mr-2 mt-1"></i>
+<span>Communist Party remained illegal until 1974</span>
+</li>
+<li class="flex items-start">
+<i class="ri-arrow-right-circle-line text-primary mr-2 mt-1"></i>
+<span>Political polarization that contributed to the 1967 military coup</span>
+</li>
+<li class="flex items-start">
+<i class="ri-arrow-right-circle-line text-primary mr-2 mt-1"></i>
+<span>Formal "national reconciliation" only achieved in the 1980s</span>
+</li>
+</ul>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<h4 class="text-xl font-bold mb-3">Social and Economic Impact</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<i class="ri-arrow-right-circle-line text-primary mr-2 mt-1"></i>
+<span>Over 100,000 political refugees in Eastern Bloc countries</span>
+</li>
+<li class="flex items-start">
+<i class="ri-arrow-right-circle-line text-primary mr-2 mt-1"></i>
+<span>Massive rural to urban migration</span>
+</li>
+<li class="flex items-start">
+<i class="ri-arrow-right-circle-line text-primary mr-2 mt-1"></i>
+<span>Destroyed infrastructure in rural areas</span>
+</li>
+<li class="flex items-start">
+<i class="ri-arrow-right-circle-line text-primary mr-2 mt-1"></i>
+<span>Dependence on American economic and military aid</span>
+</li>
+</ul>
+</div>
+</div>
+<p class="mb-6">The Greek Civil War stands as one of the first conflicts of the Cold War era, setting patterns that would be repeated in other divided nations. Its legacy continues to influence Greek politics and collective memory to this day, with the wounds of this fratricidal conflict only slowly healing over generations.</p>
+</article>
+</div>
+<!-- Right Column: Supporting Elements -->
+<div class="md:w-1/3">
+<!-- Interactive Map -->
+<div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+<h3 class="text-xl font-bold mb-4">Civil War Territorial Control</h3>
+<div class="relative h-80 bg-cover bg-center rounded" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');">
+<div class="absolute top-3 right-3 flex space-x-2">
+<button class="w-8 h-8 flex items-center justify-center bg-white rounded shadow !rounded-button whitespace-nowrap">
+<i class="ri-add-line"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-white rounded shadow !rounded-button whitespace-nowrap">
+<i class="ri-subtract-line"></i>
+</button>
+</div>
+<div class="absolute bottom-3 left-3 bg-white px-3 py-1 rounded text-sm">
+<span>1944 - 1949</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm font-medium">Timeline:</span>
+<span class="text-sm text-gray-600">August 1948</span>
+</div>
+<input type="range" min="1" max="6" value="4" class="w-full h-2 bg-gray-200 rounded appearance-none">
+<div class="flex justify-between text-xs text-gray-500 mt-1">
+<span>Dec 1944</span>
+<span>Oct 1949</span>
+</div>
+</div>
+</div>
+<!-- Statistics -->
+<div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+<h3 class="text-xl font-bold mb-4">War Statistics</h3>
+<div id="casualtiesChart" class="h-64 mb-6"></div>
+<div>
+<h4 class="font-semibold text-sm text-gray-600 mb-2">DISPLACEMENT & REFUGEES</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="border border-gray-200 rounded p-3 text-center">
+<span class="block text-2xl font-bold text-primary">700,000+</span>
+<span class="text-xs text-gray-600">Internally displaced</span>
+</div>
+<div class="border border-gray-200 rounded p-3 text-center">
+<span class="block text-2xl font-bold text-primary">100,000+</span>
+<span class="text-xs text-gray-600">Political refugees</span>
+</div>
+<div class="border border-gray-200 rounded p-3 text-center">
+<span class="block text-2xl font-bold text-primary">3,000+</span>
+<span class="text-xs text-gray-600">Villages destroyed</span>
+</div>
+<div class="border border-gray-200 rounded p-3 text-center">
+<span class="block text-2xl font-bold text-primary">28,000+</span>
+<span class="text-xs text-gray-600">Child refugees</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Historical Document -->
+<div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+<h3 class="text-xl font-bold mb-4">Historical Documents</h3>
+<div class="document-card relative mb-4 group">
+<img src="https://readdy.ai/api/search-image?query=A%2520black%2520and%2520white%2520scan%2520of%2520the%2520Truman%2520Doctrine%2520speech%2520document%2520from%25201947%252C%2520showing%2520official%2520White%2520House%2520letterhead%252C%2520typed%2520text%2520in%2520English%252C%2520and%2520possibly%2520annotations.%2520The%2520document%2520appears%2520official%2520with%2520presidential%2520seal%2520and%2520signature.%2520The%2520image%2520should%2520have%2520high%2520detail%2520to%2520show%2520the%2520texture%2520of%2520the%2520paper%2520and%2520typewriter%2520text.%2520The%2520photograph%2520has%2520a%2520documentary%2520style%2520with%2520clear%2520focus%2520on%2520the%2520text%2520content.&width=400&height=500&seq=23&orientation=portrait" alt="Truman Doctrine Speech Document" class="w-full h-auto rounded-lg">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+<i class="ri-zoom-in-line text-xl"></i>
+</div>
+</div>
+<h4 class="font-semibold mt-3">Truman Doctrine Speech</h4>
+<p class="text-sm text-gray-600">March 12, 1947</p>
+</div>
+<div class="document-card relative group">
+<img src="https://readdy.ai/api/search-image?query=A%2520black%2520and%2520white%2520scan%2520of%2520a%2520KKE%2520%28Greek%2520Communist%2520Party%29%2520proclamation%2520document%2520from%25201946%252C%2520showing%2520party%2520letterhead%2520with%2520hammer%2520and%2520sickle%2520symbol%252C%2520typed%2520text%2520in%2520Greek%252C%2520and%2520possibly%2520signatures.%2520The%2520document%2520appears%2520aged%2520with%2520slight%2520creases%2520and%2520official%2520stamps.%2520The%2520image%2520should%2520have%2520high%2520detail%2520to%2520show%2520the%2520texture%2520of%2520the%2520paper%2520and%2520ink.%2520The%2520photograph%2520has%2520a%2520documentary%2520style%2520with%2520clear%2520focus%2520on%2520the%2520text%2520content.&width=400&height=500&seq=24&orientation=portrait" alt="KKE Proclamation" class="w-full h-auto rounded-lg">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+<i class="ri-zoom-in-line text-xl"></i>
+</div>
+</div>
+<h4 class="font-semibold mt-3">KKE Armed Struggle Proclamation</h4>
+<p class="text-sm text-gray-600">October 1946</p>
+</div>
+</div>
+<!-- Key Figures -->
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h3 class="text-xl font-bold mb-4">Key Historical Figures</h3>
+<div class="flex items-center mb-4 pb-4 border-b border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=A%2520formal%2520black%2520and%2520white%2520portrait%2520photograph%2520of%2520Greek%2520Prime%2520Minister%2520Themistoklis%2520Sofoulis%2520from%25201947%252C%2520showing%2520him%2520in%2520a%2520suit%2520with%2520a%2520serious%2520expression.%2520The%2520photograph%2520should%2520be%2520a%2520professional%2520headshot%2520in%2520the%2520style%2520of%2520official%2520government%2520portraits%2520from%2520that%2520era%252C%2520with%2520clear%2520focus%2520on%2520his%2520face%2520and%2520formal%2520attire.%2520The%2520image%2520has%2520a%2520documentary%2520style%2520with%2520the%2520authentic%2520vintage%2520photography%2520quality%2520of%2520the%2520period.&width=100&height=100&seq=25&orientation=squarish" alt="Themistoklis Sofoulis" class="w-16 h-16 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-semibold">Themistoklis Sofoulis</h4>
+<p class="text-sm text-gray-600">Prime Minister of Greece (1947-1949)</p>
+</div>
+</div>
+<div class="flex items-center mb-4 pb-4 border-b border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=A%2520formal%2520black%2520and%2520white%2520portrait%2520photograph%2520of%2520Nikos%2520Zachariadis%252C%2520General%2520Secretary%2520of%2520the%2520Greek%2520Communist%2520Party%2520%28KKE%29%2520from%25201946%252C%2520showing%2520him%2520in%2520formal%2520attire%2520with%2520a%2520stern%2520expression.%2520The%2520photograph%2520should%2520be%2520a%2520professional%2520headshot%2520in%2520the%2520style%2520of%2520official%2520portraits%2520from%2520that%2520era%252C%2520with%2520clear%2520focus%2520on%2520his%2520face.%2520The%2520image%2520has%2520a%2520documentary%2520style%2520with%2520the%2520authentic%2520vintage%2520photography%2520quality%2520of%2520the%2520period.&width=100&height=100&seq=26&orientation=squarish" alt="Nikos Zachariadis" class="w-16 h-16 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-semibold">Nikos Zachariadis</h4>
+<p class="text-sm text-gray-600">KKE General Secretary (1945-1956)</p>
+</div>
+</div>
+<div class="flex items-center mb-4 pb-4 border-b border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=A%2520formal%2520black%2520and%2520white%2520portrait%2520photograph%2520of%2520General%2520Alexander%2520Papagos%2520from%25201948%252C%2520showing%2520him%2520in%2520his%2520military%2520uniform%2520with%2520medals%2520and%2520decorations.%2520The%2520photograph%2520should%2520be%2520a%2520professional%2520headshot%2520in%2520the%2520style%2520of%2520official%2520military%2520portraits%2520from%2520that%2520era%252C%2520with%2520clear%2520focus%2520on%2520his%2520face%2520and%2520military%2520attire.%2520The%2520image%2520has%2520a%2520documentary%2520style%2520with%2520the%2520authentic%2520vintage%2520photography%2520quality%2520of%2520the%2520period.&width=100&height=100&seq=27&orientation=squarish" alt="Alexander Papagos" class="w-16 h-16 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-semibold">Alexander Papagos</h4>
+<p class="text-sm text-gray-600">Commander-in-Chief, Greek National Army</p>
+</div>
+</div>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=A%2520formal%2520black%2520and%2520white%2520portrait%2520photograph%2520of%2520Markos%2520Vafiadis%252C%2520military%2520leader%2520of%2520the%2520Democratic%2520Army%2520of%2520Greece%2520from%25201947%252C%2520showing%2520him%2520in%2520partisan%2520military%2520attire%2520with%2520a%2520serious%2520expression.%2520The%2520photograph%2520should%2520be%2520a%2520professional%2520headshot%2520in%2520the%2520style%2520of%2520military%2520portraits%2520from%2520that%2520era%252C%2520with%2520clear%2520focus%2520on%2520his%2520face%2520and%2520partisan%2520uniform.%2520The%2520image%2520has%2520a%2520documentary%2520style%2520with%2520the%2520authentic%2520vintage%2520photography%2520quality%2520of%2520the%2520period.&width=100&height=100&seq=28&orientation=squarish" alt="Markos Vafiadis" class="w-16 h-16 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-semibold">Markos Vafiadis</h4>
+<p class="text-sm text-gray-600">DSE Commander (1946-1949)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Multimedia Gallery -->
+<section class="py-12 bg-gray-100">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold mb-8 text-center">Historical Gallery</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%2520powerful%2520black%2520and%2520white%2520historical%2520photograph%2520showing%2520the%2520Battle%2520of%2520Athens%2520%28Dekemvriana%29%2520in%2520December%25201944%252C%2520with%2520ELAS%2520fighters%2520exchanging%2520fire%2520with%2520government%2520forces%2520in%2520urban%2520street%2520settings.%2520The%2520image%2520should%2520show%2520barricades%252C%2520damaged%2520buildings%252C%2520and%2520armed%2520combatants%2520in%2520an%2520authentic%2520urban%2520warfare%2520scene.%2520The%2520photograph%2520should%2520have%2520authentic%2520period%2520details%2520with%2520a%2520documentary%2520style%252C%2520high%2520contrast%2520and%2520film%2520grain%2520texture.&width=400&height=300&seq=29&orientation=landscape" alt="Battle of Athens, December 1944" class="w-full h-64 object-cover object-top">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<i class="ri-zoom-in-line text-xl"></i>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-1">Battle of Athens (Dekemvriana)</h3>
+<p class="text-sm text-gray-600">Athens, December 1944</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%2520dramatic%2520black%2520and%2520white%2520historical%2520photograph%2520showing%2520British%2520troops%2520with%2520tanks%2520in%2520Athens%2520during%2520the%2520December%2520Events%2520of%25201944.%2520The%2520image%2520should%2520show%2520British%2520soldiers%2520in%2520combat%2520positions%2520with%2520military%2520vehicles%2520in%2520urban%2520settings.%2520The%2520photograph%2520should%2520have%2520authentic%2520period%2520details%2520with%2520British%2520military%2520uniforms%2520and%2520equipment%2520visible.%2520The%2520image%2520has%2520a%2520documentary%2520style%2520with%2520high%2520contrast%2520and%2520film%2520grain%2520texture.&width=400&height=300&seq=30&orientation=landscape" alt="British troops in Athens, 1944" class="w-full h-64 object-cover object-top">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<i class="ri-zoom-in-line text-xl"></i>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-1">British Intervention Forces</h3>
+<p class="text-sm text-gray-600">Athens, December 1944</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%2520somber%2520black%2520and%2520white%2520historical%2520photograph%2520showing%2520the%2520signing%2520of%2520the%2520Varkiza%2520Agreement%2520in%2520February%25201945%252C%2520with%2520representatives%2520of%2520the%2520Greek%2520government%2520and%2520EAM-ELAS%2520at%2520a%2520formal%2520table%2520with%2520documents.%2520The%2520image%2520should%2520show%2520the%2520tension%2520of%2520the%2520moment%2520with%2520serious%2520expressions%2520as%2520officials%2520sign%2520papers.%2520The%2520photograph%2520should%2520have%2520authentic%2520period%2520details%2520with%2520a%2520documentary%2520style%252C%2520high%2520contrast%2520and%2520film%2520grain%2520texture.&width=400&height=300&seq=31&orientation=landscape" alt="Signing of the Varkiza Agreement, 1945" class="w-full h-64 object-cover object-top">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<i class="ri-zoom-in-line text-xl"></i>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-1">Signing of the Varkiza Agreement</h3>
+<p class="text-sm text-gray-600">Varkiza, February 12, 1945</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%2520detailed%2520black%2520and%2520white%2520historical%2520photograph%2520showing%2520Democratic%2520Army%2520of%2520Greece%2520%28DSE%29%2520guerrilla%2520fighters%2520in%2520mountain%2520terrain%2520in%25201948.%2520The%2520image%2520should%2520show%2520communist%2520partisans%2520with%2520weapons%2520in%2520a%2520mountain%2520camp%2520or%2520during%2520an%2520operation%252C%2520wearing%2520a%2520mix%2520of%2520civilian%2520and%2520military%2520clothing.%2520The%2520photograph%2520should%2520have%2520authentic%2520period%2520details%2520with%2520a%2520documentary%2520style%252C%2520high%2520contrast%2520and%2520film%2520grain%2520texture.&width=400&height=300&seq=32&orientation=landscape" alt="DSE guerrilla fighters in mountains, 1948" class="w-full h-64 object-cover object-top">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<i class="ri-zoom-in-line text-xl"></i>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-1">DSE Guerrilla Fighters</h3>
+<p class="text-sm text-gray-600">Grammos Mountains, 1948</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%2520poignant%2520black%2520and%2520white%2520historical%2520photograph%2520showing%2520child%2520refugees%2520being%2520evacuated%2520from%2520Greece%2520to%2520Eastern%2520Bloc%2520countries%2520in%25201948.%2520The%2520image%2520should%2520show%2520children%2520in%2520groups%2520being%2520led%2520by%2520adults%252C%2520carrying%2520small%2520bundles%2520of%2520possessions%252C%2520with%2520expressions%2520of%2520confusion%2520and%2520sadness.%2520The%2520photograph%2520should%2520have%2520authentic%2520period%2520details%2520with%2520a%2520documentary%2520style%252C%2520high%2520contrast%2520and%2520film%2520grain%2520texture.&width=400&height=300&seq=33&orientation=landscape" alt="Child refugees being evacuated, 1948" class="w-full h-64 object-cover object-top">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<i class="ri-zoom-in-line text-xl"></i>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-1">Child Refugees ("Paidomazoma")</h3>
+<p class="text-sm text-gray-600">Northern Greece, 1948</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+<div class="relative">
+<div class="absolute inset-0 flex items-center justify-center bg-gray-900">
+<i class="ri-film-line text-white text-5xl"></i>
+</div>
+<img src="https://readdy.ai/api/search-image?query=A%2520film%2520still%2520from%2520historical%2520footage%2520showing%2520American%2520military%2520aid%2520arriving%2520in%2520Greece%2520in%25201947%2520as%2520part%2520of%2520the%2520Truman%2520Doctrine.%2520The%2520image%2520should%2520appear%2520as%2520a%2520frame%2520from%2520a%2520black%2520and%2520white%2520newsreel%2520showing%2520American%2520ships%2520unloading%2520military%2520equipment%2520with%2520Greek%2520and%2520American%2520officials%2520present.%2520The%2520photograph%2520should%2520have%2520authentic%2520period%2520details%2520with%2520the%2520characteristic%2520quality%2520of%25201940s%2520film%2520footage.&width=400&height=300&seq=34&orientation=landscape" alt="American aid arriving in Greece, 1947" class="w-full h-64 object-cover object-top opacity-60">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<i class="ri-play-fill text-xl"></i>
+</div>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-semibold mb-1">Historical Footage: American Aid</h3>
+<p class="text-sm text-gray-600">Piraeus Port, July 1947</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-8">
+<button class="bg-white border border-gray-300 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-50 transition !rounded-button whitespace-nowrap">View Full Gallery</button>
+</div>
+</div>
+</section>
+<!-- Historical Documents Section -->
+<section class="py-12">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold mb-8 text-center">Historical Documents</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white rounded-lg shadow-sm p-5 document-card group">
+<div class="relative mb-4">
+<img src="https://readdy.ai/api/search-image?query=A%2520black%2520and%2520white%2520scan%2520of%2520the%2520Varkiza%2520Agreement%2520document%2520from%2520February%25201945%252C%2520showing%2520official%2520letterhead%252C%2520typed%2520text%2520in%2520Greek%252C%2520and%2520signatures%2520of%2520government%2520and%2520ELAS%2520representatives.%2520The%2520document%2520appears%2520aged%2520with%2520slight%2520creases%2520and%2520official%2520stamps.%2520The%2520image%2520should%2520have%2520high%2520detail%2520to%2520show%2520the%2520texture%2520of%2520the%2520paper%2520and%2520ink.%2520The%2520photograph%2520has%2520a%2520documentary%2520style%2520with%2520clear%2520focus%2520on%2520the%2520text%2520content.&width=300&height=400&seq=35&orientation=portrait" alt="Varkiza Agreement" class="w-full h-auto rounded-lg">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-10 h-10 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+<i class="ri-zoom-in-line"></i>
+</div>
+</div>
+</div>
+<h3 class="font-semibold mb-2">Varkiza Agreement</h3>
+<p class="text-sm text-gray-600 mb-3">February 12, 1945</p>
+<p class="text-sm">Peace agreement between the Greek government and ELAS representatives ending the first phase of the civil war.</p>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-5 document-card group">
+<div class="relative mb-4">
+<img src="https://readdy.ai/api/search-image?query=A%2520black%2520and%2520white%2520scan%2520of%2520President%2520Truman%2527s%2520speech%2520to%2520Congress%2520requesting%2520aid%2520for%2520Greece%2520in%25201947%252C%2520showing%2520official%2520White%2520House%2520letterhead%252C%2520typed%2520text%2520in%2520English%252C%2520and%2520presidential%2520signature.%2520The%2520document%2520appears%2520official%2520with%2520governmental%2520markings.%2520The%2520image%2520should%2520have%2520high%2520detail%2520to%2520show%2520the%2520texture%2520of%2520the%2520paper%2520and%2520typewriter%2520text.%2520The%2520photograph%2520has%2520a%2520documentary%2520style%2520with%2520clear%2520focus%2520on%2520the%2520text%2520content.&width=300&height=400&seq=36&orientation=portrait" alt="Truman Doctrine Speech" class="w-full h-auto rounded-lg">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-10 h-10 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+<i class="ri-zoom-in-line"></i>
+</div>
+</div>
+</div>
+<h3 class="font-semibold mb-2">Truman Doctrine Speech</h3>
+<p class="text-sm text-gray-600 mb-3">March 12, 1947</p>
+<p class="text-sm">President Truman's address to Congress requesting aid for Greece and Turkey, marking the beginning of the containment policy.</p>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-5 document-card group">
+<div class="relative mb-4">
+<img src="https://readdy.ai/api/search-image?query=A%2520black%2520and%2520white%2520scan%2520of%2520a%2520KKE%2520%28Greek%2520Communist%2520Party%29%2520declaration%2520establishing%2520the%2520Provisional%2520Democratic%2520Government%2520in%25201947%252C%2520showing%2520party%2520letterhead%2520with%2520communist%2520symbols%252C%2520typed%2520text%2520in%2520Greek%252C%2520and%2520official%2520signatures.%2520The%2520document%2520appears%2520aged%2520with%2520slight%2520creases%2520and%2520official%2520stamps.%2520The%2520image%2520should%2520have%2520high%2520detail%2520to%2520show%2520the%2520texture%2520of%2520the%2520paper%2520and%2520ink.%2520The%2520photograph%2520has%2520a%2520documentary%2520style%2520with%2520clear%2520focus%2520on%2520the%2520text%2520content.&width=300&height=400&seq=37&orientation=portrait" alt="Provisional Democratic Government Declaration" class="w-full h-auto rounded-lg">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-10 h-10 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+<i class="ri-zoom-in-line"></i>
+</div>
+</div>
+</div>
+<h3 class="font-semibold mb-2">Provisional Democratic Government Declaration</h3>
+<p class="text-sm text-gray-600 mb-3">December 24, 1947</p>
+<p class="text-sm">KKE declaration establishing a rival government in the mountains of northern Greece.</p>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-5 document-card group">
+<div class="relative mb-4">
+<img src="https://readdy.ai/api/search-image?query=A%2520black%2520and%2520white%2520scan%2520of%2520the%2520KKE%2520%28Greek%2520Communist%2520Party%29%2520ceasefire%2520announcement%2520from%25201949%252C%2520showing%2520party%2520letterhead%252C%2520typed%2520text%2520in%2520Greek%252C%2520and%2520official%2520signatures.%2520The%2520document%2520appears%2520aged%2520with%2520slight%2520creases%2520and%2520official%2520stamps.%2520The%2520image%2520should%2520have%2520high%2520detail%2520to%2520show%2520the%2520texture%2520of%2520the%2520paper%2520and%2520ink.%2520The%2520photograph%2520has%2520a%2520documentary%2520style%2520with%2520clear%2520focus%2520on%2520the%2520text%2520content.&width=300&height=400&seq=38&orientation=portrait" alt="KKE Ceasefire Announcement" class="w-full h-auto rounded-lg">
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+<div class="w-10 h-10 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+<i class="ri-zoom-in-line"></i>
+</div>
+</div>
+</div>
+<h3 class="font-semibold mb-2">KKE Ceasefire Announcement</h3>
+<p class="text-sm text-gray-600 mb-3">October 16, 1949</p>
+<p class="text-sm">Radio announcement by the Communist Party declaring a "temporary ceasefire," effectively ending the civil war.</p>
+</div>
+</div>
+<div class="mt-12">
+<h3 class="text-2xl font-bold mb-6">Document Archive</h3>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-6">
+<div class="relative w-64">
+<input type="text" class="w-full bg-gray-100 rounded-full py-2 pl-10 pr-4 text-sm search-input border-none" placeholder="Search documents...">
+<div class="absolute left-3 top-2.5 w-4 h-4 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+<div class="flex space-x-3">
+<button class="flex items-center space-x-2 bg-gray-100 px-4 py-2 rounded-full text-sm !rounded-button whitespace-nowrap">
+<span>Filter</span>
+<i class="ri-filter-3-line"></i>
+</button>
+<button class="flex items-center space-x-2 bg-gray-100 px-4 py-2 rounded-full text-sm !rounded-button whitespace-nowrap">
+<span>Sort by Date</span>
+<i class="ri-arrow-down-s-line"></i>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full">
+<thead>
+<tr class="text-left text-sm text-gray-600 border-b border-gray-200">
+<th class="pb-3 font-medium">Document Title</th>
+<th class="pb-3 font-medium">Date</th>
+<th class="pb-3 font-medium">Type</th>
+<th class="pb-3 font-medium">Source</th>
+<th class="pb-3 font-medium">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-gray-100">
+<td class="py-4">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+<i class="ri-file-text-line text-gray-600"></i>
+</div>
+<span>White House Memorandum on Greek Aid</span>
+</div>
+</td>
+<td class="py-4 text-sm">February 27, 1947</td>
+<td class="py-4 text-sm">Government Document</td>
+<td class="py-4 text-sm">U.S. National Archives</td>
+<td class="py-4">
+<div class="flex space-x-2">
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-eye-line text-gray-600"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-download-line text-gray-600"></i>
+</button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-gray-100">
+<td class="py-4">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+<i class="ri-file-text-line text-gray-600"></i>
+</div>
+<span>KKE Central Committee Meeting Minutes</span>
+</div>
+</td>
+<td class="py-4 text-sm">September 15, 1947</td>
+<td class="py-4 text-sm">Political Document</td>
+<td class="py-4 text-sm">KKE Historical Archives</td>
+<td class="py-4">
+<div class="flex space-x-2">
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-eye-line text-gray-600"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-download-line text-gray-600"></i>
+</button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-gray-100">
+<td class="py-4">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+<i class="ri-file-text-line text-gray-600"></i>
+</div>
+<span>British Embassy Report on Civil War</span>
+</div>
+</td>
+<td class="py-4 text-sm">June 10, 1948</td>
+<td class="py-4 text-sm">Diplomatic Correspondence</td>
+<td class="py-4 text-sm">British National Archives</td>
+<td class="py-4">
+<div class="flex space-x-2">
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-eye-line text-gray-600"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-download-line text-gray-600"></i>
+</button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-gray-100">
+<td class="py-4">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+<i class="ri-file-text-line text-gray-600"></i>
+</div>
+<span>Greek Army Battle Report: Grammos Offensive</span>
+</div>
+</td>
+<td class="py-4 text-sm">August 24, 1949</td>
+<td class="py-4 text-sm">Military Document</td>
+<td class="py-4 text-sm">Greek Army Archives</td>
+<td class="py-4">
+<div class="flex space-x-2">
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-eye-line text-gray-600"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-download-line text-gray-600"></i>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="py-4">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+<i class="ri-file-text-line text-gray-600"></i>
+</div>
+<span>UN Report on Greek Refugee Crisis</span>
+</div>
+</td>
+<td class="py-4 text-sm">November 5, 1949</td>
+<td class="py-4 text-sm">International Organization</td>
+<td class="py-4 text-sm">United Nations Archives</td>
+<td class="py-4">
+<div class="flex space-x-2">
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-eye-line text-gray-600"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-download-line text-gray-600"></i>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<div class="text-sm text-gray-600">
+Showing 5 of 118 documents
+</div>
+<div class="flex space-x-2">
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-arrow-left-s-line"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded !rounded-button whitespace-nowrap">1</button>
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">2</button>
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">3</button>
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-more-line"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+<i class="ri-arrow-right-s-line"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Greece in WWII</h3>
+<p class="text-gray-400 mb-6">A comprehensive historical archive documenting Greece's role in the Second World War from 1936 to 1949.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-4">Historical Periods</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a href="https://readdy.ai/home/a87647db-1585-40a2-a5f1-1ac90bafbd4b/765bf137-1076-4a38-827a-44e399086c3a" data-readdy="true" class="hover:text-white transition">Pre-war Greece (1936-1940)</a></li>
+<li><a href="https://readdy.ai/home/a87647db-1585-40a2-a5f1-1ac90bafbd4b/765bf137-1076-4a38-827a-44e399086c3a" data-readdy="true" class="hover:text-white transition">Italian War (1940-1941)</a></li>
+<li><a href="https://readdy.ai/home/a87647db-1585-40a2-a5f1-1ac90bafbd4b/765bf137-1076-4a38-827a-44e399086c3a" data-readdy="true" class="hover:text-white transition">German Occupation (1941-1944)</a></li>
+<li><a href="https://readdy.ai/home/a87647db-1585-40a2-a5f1-1ac90bafbd4b/765bf137-1076-4a38-827a-44e399086c3a" data-readdy="true" class="hover:text-white transition">Resistance Movement (1942-1944)</a></li>
+<li><a href="#" class="hover:text-white transition">Civil War (1944-1949)</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Resources</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a href="#" class="hover:text-white transition">Historical Documents</a></li>
+<li><a href="#" class="hover:text-white transition">Photograph Archive</a></li>
+<li><a href="#" class="hover:text-white transition">Video Footage</a></li>
+<li><a href="#" class="hover:text-white transition">Interactive Maps</a></li>
+<li><a href="#" class="hover:text-white transition">Oral Histories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Stay Updated</h4>
+<p class="text-gray-400 mb-4">Subscribe to receive updates on new historical content and exhibits.</p>
+<div class="flex">
+<input type="email" placeholder="Your email address" class="bg-gray-800 rounded-l-full py-2 px-4 text-sm w-full border-none">
+<button class="bg-primary text-white rounded-r-full px-4 hover:bg-red-800 transition !rounded-button whitespace-nowrap">Subscribe</button>
+</div>
+<div class="mt-6">
+<label class="custom-checkbox flex items-center text-sm text-gray-400">
+<input type="checkbox">
+<span class="checkmark"></span>
+<span class="ml-6">I agree to receive newsletter emails</span>
+</label>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+<div class="text-gray-500 text-sm mb-4 md:mb-0">
+© 2025 Greece in WWII Historical Archive. All rights reserved.
+</div>
+<div class="flex space-x-6 text-sm text-gray-500">
+<a href="#" class="hover:text-white transition">Privacy Policy</a>
+<a href="#" class="hover:text-white transition">Terms of Use</a>
+<a href="#" class="hover:text-white transition">Contact Us</a>
+<a href="#" class="hover:text-white transition">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="timelineInteraction">
+document.addEventListener('DOMContentLoaded', function() {
+const timelineItems = document.querySelectorAll('.timeline-item');
+timelineItems.forEach(item => {
+item.addEventListener('click', function() {
+timelineItems.forEach(i => i.classList.remove('active'));
+this.classList.add('active');
+const period = this.querySelector('span:last-child').textContent;
+const notification = document.createElement('div');
+notification.className = 'fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 z-50 animate-fade-in-down';
+notification.innerHTML = `
+<div class="flex items-center">
+<i class="ri-time-line text-primary mr-2"></i>
+<span>Viewing historical period: ${period}</span>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+});
+});
+});
+</script>
+<script id="documentZoom">
+document.addEventListener('DOMContentLoaded', function() {
+const modal = document.createElement('div');
+modal.className = 'fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50';
+modal.innerHTML = `
+<div class="bg-white rounded-lg max-w-4xl w-full mx-4 relative">
+<button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+<i class="ri-close-line text-2xl"></i>
+</button>
+<div class="p-6">
+<img class="w-full h-auto" src="" alt="Document Preview">
+<div class="mt-4">
+<h3 class="font-bold text-xl mb-2"></h3>
+<p class="text-gray-600"></p>
+<div class="flex gap-4 mt-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-button">
+<i class="ri-download-line"></i>
+<span>Download</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-button">
+<i class="ri-share-line"></i>
+<span>Share</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-button">
+<i class="ri-zoom-in-line"></i>
+<span>Zoom</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+`;
+document.body.appendChild(modal);
+const closeModal = () => {
+modal.classList.remove('flex');
+modal.classList.add('hidden');
+};
+modal.querySelector('button').addEventListener('click', closeModal);
+modal.addEventListener('click', e => {
+if (e.target === modal) closeModal();
+});
+// Handle zoom functionality
+let scale = 1;
+const zoomButton = modal.querySelector('.ri-zoom-in-line').parentElement;
+const image = modal.querySelector('img');
+zoomButton.addEventListener('click', () => {
+scale = scale === 1 ? 1.5 : 1;
+image.style.transform = `scale(${scale})`;
+image.style.transition = 'transform 0.3s ease';
+});
+// Handle download functionality
+const downloadButton = modal.querySelector('.ri-download-line').parentElement;
+downloadButton.addEventListener('click', () => {
+const notification = document.createElement('div');
+notification.className = 'fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 z-50 animate-fade-in-down';
+notification.innerHTML = `
+<div class="flex items-center">
+<i class="ri-download-cloud-line text-primary mr-2"></i>
+<span>Document download started</span>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+});
+// Handle share functionality
+const shareButton = modal.querySelector('.ri-share-line').parentElement;
+shareButton.addEventListener('click', () => {
+const notification = document.createElement('div');
+notification.className = 'fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 z-50 animate-fade-in-down';
+notification.innerHTML = `
+<div class="flex items-center">
+<i class="ri-share-line text-primary mr-2"></i>
+<span>Share link copied to clipboard</span>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+});
+const documentCards = document.querySelectorAll('.document-card');
+documentCards.forEach(card => {
+card.addEventListener('click', function() {
+const img = this.querySelector('img');
+const title = this.querySelector('h3, h4').textContent;
+const date = this.querySelector('p').textContent;
+modal.querySelector('img').src = img.src;
+modal.querySelector('img').alt = img.alt;
+modal.querySelector('h3').textContent = title;
+modal.querySelector('p').textContent = date;
+modal.classList.add('flex');
+modal.classList.remove('hidden');
+scale = 1;
+image.style.transform = `scale(${scale})`;
+});
+});
+});
+</script>
+<script id="searchFunctionality">
+document.addEventListener('DOMContentLoaded', function() {
+const searchInputs = document.querySelectorAll('.search-input');
+const searchResults = document.createElement('div');
+searchResults.className = 'absolute top-full left-0 right-0 bg-white rounded-lg shadow-lg mt-2 hidden z-50';
+searchInputs.forEach(input => {
+const searchContainer = input.parentElement;
+searchContainer.style.position = 'relative';
+searchContainer.appendChild(searchResults.cloneNode(true));
+input.addEventListener('focus', function() {
+this.parentElement.classList.add('ring-2', 'ring-primary', 'ring-opacity-50');
+});
+input.addEventListener('blur', function() {
+this.parentElement.classList.remove('ring-2', 'ring-primary', 'ring-opacity-50');
+setTimeout(() => {
+this.parentElement.querySelector('.absolute').classList.add('hidden');
+}, 200);
+});
+input.addEventListener('input', function() {
+const results = this.parentElement.querySelector('.absolute');
+if (this.value.length > 0) {
+results.innerHTML = `
+<div class="p-4">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm text-gray-600">Search results for "${this.value}"</span>
+<span class="text-xs text-primary">Press Enter to search</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center p-2 hover:bg-gray-50 rounded cursor-pointer">
+<i class="ri-file-text-line mr-2 text-gray-400"></i>
+<span>Documents containing "${this.value}"</span>
+</div>
+<div class="flex items-center p-2 hover:bg-gray-50 rounded cursor-pointer">
+<i class="ri-image-line mr-2 text-gray-400"></i>
+<span>Photos related to "${this.value}"</span>
+</div>
+</div>
+</div>
+`;
+results.classList.remove('hidden');
+} else {
+results.classList.add('hidden');
+}
+});
+input.addEventListener('keypress', function(e) {
+if (e.key === 'Enter') {
+const notification = document.createElement('div');
+notification.className = 'fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 z-50 animate-fade-in-down';
+notification.innerHTML = `
+<div class="flex items-center">
+<i class="ri-search-line text-primary mr-2"></i>
+<span>Searching for: ${this.value}</span>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+this.value = '';
+this.parentElement.querySelector('.absolute').classList.add('hidden');
+}
+});
+});
+});
+</script>
+<script id="customFormControls">
+document.addEventListener('DOMContentLoaded', function() {
+const customCheckboxes = document.querySelectorAll('.custom-checkbox input');
+customCheckboxes.forEach(checkbox => {
+checkbox.addEventListener('change', function() {
+const notification = document.createElement('div');
+notification.className = 'fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 z-50 animate-fade-in-down';
+notification.innerHTML = `
+<div class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+<span>${this.checked ? 'Subscribed to newsletter' : 'Unsubscribed from newsletter'}</span>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+});
+});
+const subscribeButtons = document.querySelectorAll('button:not(.custom-switch)');
+subscribeButtons.forEach(button => {
+button.addEventListener('click', function() {
+const emailInput = this.parentElement.querySelector('input[type="email"]');
+if (emailInput && emailInput.value) {
+const notification = document.createElement('div');
+notification.className = 'fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 z-50 animate-fade-in-down';
+notification.innerHTML = `
+<div class="flex items-center">
+<i class="ri-mail-check-line text-primary mr-2"></i>
+<span>Successfully subscribed: ${emailInput.value}</span>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+emailInput.value = '';
+}
+});
+});
+const downloadButtons = document.querySelectorAll('button i.ri-download-line').forEach(button => {
+button.parentElement.addEventListener('click', function(e) {
+e.preventDefault();
+const notification = document.createElement('div');
+notification.className = 'fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 z-50 animate-fade-in-down';
+notification.innerHTML = `
+<div class="flex items-center">
+<i class="ri-download-cloud-line text-primary mr-2"></i>
+<span>Document download started</span>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+});
+});
+const viewButtons = document.querySelectorAll('button i.ri-eye-line').forEach(button => {
+button.parentElement.addEventListener('click', function(e) {
+e.preventDefault();
+const notification = document.createElement('div');
+notification.className = 'fixed top-20 right-4 bg-white shadow-lg rounded-lg p-4 z-50 animate-fade-in-down';
+notification.innerHTML = `
+<div class="flex items-center">
+<i class="ri-file-text-line text-primary mr-2"></i>
+<span>Opening document preview</span>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+});
+});
+});
+</script>
+<script id="chartInitialization">
+document.addEventListener('DOMContentLoaded', function() {
+const casualtiesChart = echarts.init(document.getElementById('casualtiesChart'));
+const option = {
+animation: false,
+title: {
+text: 'Civil War Casualties',
+textStyle: {
+color: '#1f2937',
+fontWeight: 'bold',
+fontSize: 14
+},
+left: 'center'
+},
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.8)',
+borderColor: '#ddd',
+borderWidth: 1,
+textStyle: {
+color: '#1f2937'
+}
+},
+legend: {
+data: ['Government Forces', 'Communist Forces', 'Civilians'],
+bottom: '0%',
+textStyle: {
+color: '#1f2937'
+}
+},
+grid: {
+left: '0%',
+right: '0%',
+top: '15%',
+bottom: '15%',
+containLabel: true
+},
+xAxis: {
+type: 'category',
+data: ['1944', '1945', '1946', '1947', '1948', '1949'],
+axisLine: {
+lineStyle: {
+color: '#ddd'
+}
+},
+axisLabel: {
+color: '#1f2937'
+}
+},
+yAxis: {
+type: 'value',
+axisLine: {
+lineStyle: {
+color: '#ddd'
+}
+},
+axisLabel: {
+color: '#1f2937'
+},
+splitLine: {
+lineStyle: {
+color: '#eee'
+}
+}
+},
+series: [
+{
+name: 'Government Forces',
+type: 'line',
+smooth: true,
+symbol: 'none',
+lineStyle: {
+width: 3
+},
+itemStyle: {
+color: 'rgba(87, 181, 231, 1)'
+},
+areaStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+{
+offset: 0,
+color: 'rgba(87, 181, 231, 0.3)'
+},
+{
+offset: 1,
+color: 'rgba(87, 181, 231, 0.1)'
+}
+])
+},
+data: [800, 1200, 2500, 3800, 5200, 4100]
+},
+{
+name: 'Communist Forces',
+type: 'line',
+smooth: true,
+symbol: 'none',
+lineStyle: {
+width: 3
+},
+itemStyle: {
+color: 'rgba(252, 141, 98, 1)'
+},
+areaStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+{
+offset: 0,
+color: 'rgba(252, 141, 98, 0.3)'
+},
+{
+offset: 1,
+color: 'rgba(252, 141, 98, 0.1)'
+}
+])
+},
+data: [600, 1800, 3200, 5500, 7800, 6200]
+},
+{
+name: 'Civilians',
+type: 'line',
+smooth: true,
+symbol: 'none',
+lineStyle: {
+width: 3
+},
+itemStyle: {
+color: 'rgba(141, 211, 199, 1)'
+},
+areaStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+{
+offset: 0,
+color: 'rgba(141, 211, 199, 0.3)'
+},
+{
+offset: 1,
+color: 'rgba(141, 211, 199, 0.1)'
+}
+])
+},
+data: [1200, 2500, 4800, 7200, 8500, 6800]
+}
+]
+};
+casualtiesChart.setOption(option);
+window.addEventListener('resize', function() {
+casualtiesChart.resize();
+});
+});
+</script>
+</body>
+</html>
