@@ -1,0 +1,893 @@
+undefined<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greece in WWII | Historical Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#8B0000',secondary:'#4A4A4A'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Source Serif 4', serif;
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .timeline-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #8B0000;
+            border-radius: 50%;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background-color: #4A4A4A;
+            border-radius: 50%;
+        }
+        .hero-parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .search-input:focus {
+            outline: none;
+        }
+        .document-card:hover .zoom-icon {
+            opacity: 1;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #8B0000;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .custom-checkbox {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+        }
+        .custom-checkbox:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: #8B0000;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .custom-checkbox .checkmark:after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .custom-switch {
+            position: relative;
+            display: inline-block;
+            width: 48px;
+            height: 24px;
+        }
+        .custom-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #8B0000;
+        }
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-gray-900 text-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <h1 class="text-2xl font-bold tracking-wider">Greece in WWII</h1>
+                <nav class="hidden md:flex">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="hover:text-primary border-b-2 border-primary pb-1">Pre-war</a></li>
+                        <li><a href="#" class="hover:text-primary pb-1">Italian War</a></li>
+                        <li><a href="#" class="hover:text-primary pb-1">German Occupation</a></li>
+                        <li><a href="#" class="hover:text-primary pb-1">Resistance</a></li>
+                        <li><a href="#" class="hover:text-primary pb-1">Civil War</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="relative">
+                <input type="text" class="bg-gray-800 rounded-full py-2 pl-10 pr-4 text-sm search-input border-none" placeholder="Search historical events...">
+                <div class="absolute left-3 top-2.5 w-4 h-4 flex items-center justify-center text-gray-400">
+                    <i class="ri-search-line"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[500px] hero-parallax" style="background-image: url('https://readdy.ai/api/search-image?query=A%20powerful%20black%20and%20white%20historical%20photograph%20showing%20Greek%20soldiers%20in%20the%20mountains%20during%20World%20War%20II%2C%20with%20dramatic%20lighting%20and%20composition.%20The%20image%20should%20capture%20the%20determination%20and%20resilience%20of%20Greek%20forces%2C%20with%20mountains%20in%20the%20background%20and%20soldiers%20in%20period-appropriate%20uniforms.%20The%20photograph%20should%20have%20a%20vintage%2C%20documentary%20style%20with%20high%20contrast%20and%20film%20grain%20texture.&width=1920&height=1080&seq=1&orientation=landscape');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-primary text-white px-4 py-1 text-sm font-semibold mb-4">1940-1941: The Italian War</span>
+                <h2 class="text-5xl font-bold text-white mb-6 leading-tight">Greece's Heroic Stand: The First Allied Victory Against Axis Powers</h2>
+                <p class="text-xl text-gray-100 mb-8">When Mussolini's forces invaded on October 28, 1940, Greece's unexpected resistance became a pivotal moment that changed the course of World War II.</p>
+                <button class="bg-white text-gray-900 px-6 py-3 font-semibold hover:bg-gray-200 transition !rounded-button whitespace-nowrap">Explore the Timeline</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Navigation -->
+    <section class="bg-gray-100 border-b border-gray-200 sticky top-16 z-40">
+        <div class="container mx-auto px-4 py-6">
+            <div class="relative">
+                <div class="h-1 bg-gray-300 absolute top-1/2 left-0 right-0 -translate-y-1/2"></div>
+                <div class="flex justify-between relative">
+                    <div class="timeline-item relative text-center cursor-pointer">
+                        <span class="block text-sm font-semibold mb-2">1936-1940</span>
+                        <span class="block text-xs text-gray-600">Pre-war</span>
+                    </div>
+                    <div class="timeline-item active relative text-center cursor-pointer">
+                        <span class="block text-sm font-semibold mb-2 text-primary">1940-1941</span>
+                        <span class="block text-xs text-gray-600">Italian War</span>
+                    </div>
+                    <div class="timeline-item relative text-center cursor-pointer">
+                        <span class="block text-sm font-semibold mb-2">1941-1944</span>
+                        <span class="block text-xs text-gray-600">German Occupation</span>
+                    </div>
+                    <div class="timeline-item relative text-center cursor-pointer">
+                        <span class="block text-sm font-semibold mb-2">1942-1944</span>
+                        <span class="block text-xs text-gray-600">Resistance</span>
+                    </div>
+                    <div class="timeline-item relative text-center cursor-pointer">
+                        <span class="block text-sm font-semibold mb-2">1944-1949</span>
+                        <span class="block text-xs text-gray-600">Civil War</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 flex justify-between">
+                <div class="flex space-x-4">
+                    <button class="flex items-center space-x-2 bg-white border border-gray-300 px-4 py-2 rounded-full text-sm !rounded-button whitespace-nowrap">
+                        <span>All Events</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <button class="flex items-center space-x-2 bg-white border border-gray-300 px-4 py-2 rounded-full text-sm !rounded-button whitespace-nowrap">
+                        <span>Filter by Region</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="text-sm text-gray-600">View:</span>
+                    <button class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded">
+                        <i class="ri-layout-2-line"></i>
+                    </button>
+                    <button class="w-8 h-8 flex items-center justify-center bg-white border border-gray-300 rounded">
+                        <i class="ri-list-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Left Column: Main Content -->
+                <div class="md:w-2/3">
+                    <article class="bg-white rounded-lg shadow-sm p-8 mb-8">
+                        <h2 class="text-3xl font-bold mb-6">The Italian Invasion of Greece</h2>
+                        <p class="text-lg mb-6">On October 28, 1940, after the Greek Prime Minister Ioannis Metaxas rejected an Italian ultimatum demanding the occupation of Greek territory, Italian forces invaded Greece from neighboring Albania. This date is now celebrated in Greece as "Oxi Day" ("No" Day), commemorating Metaxas's alleged response to the ultimatum.</p>
+                        
+                        <div class="my-8">
+                            <img src="https://readdy.ai/api/search-image?query=Black%20and%20white%20historical%20photograph%20showing%20Italian%20troops%20marching%20through%20mountainous%20terrain%20in%20Albania%20near%20the%20Greek%20border%20in%201940.%20The%20image%20should%20capture%20the%20difficult%20terrain%20with%20soldiers%20carrying%20equipment%2C%20some%20on%20mules%2C%20moving%20through%20narrow%20mountain%20passes.%20The%20photograph%20should%20have%20authentic%20period%20details%20with%20military%20vehicles%20and%20artillery%20visible%20in%20the%20background.%20The%20image%20has%20a%20documentary%20style%20with%20high%20contrast%20and%20film%20grain%20texture.&width=800&height=500&seq=2&orientation=landscape" alt="Italian forces marching toward Greek border, 1940" class="w-full h-auto rounded-lg mb-2">
+                            <p class="text-sm text-gray-600 italic">Italian forces marching toward the Greek border through Albanian mountains, October 1940.</p>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-4">Greek Counteroffensive</h3>
+                        <p class="mb-6">Despite being vastly outnumbered and outgunned, the Greek forces mounted a successful defense and then a counteroffensive that drove the Italians back into Albania. By mid-December 1940, Greek forces had captured the strategic Albanian towns of Korçë, Sarandë, and Gjirokastër, and were threatening Vlorë, a major Italian supply base.</p>
+                        
+                        <blockquote class="border-l-4 border-primary pl-4 italic my-6">
+                            <p class="text-lg">"Hence we will not say that Greeks fight like heroes, but that heroes fight like Greeks."</p>
+                            <cite class="text-sm block mt-2">— Winston Churchill, 1941</cite>
+                        </blockquote>
+                        
+                        <p class="mb-6">The Greek victory over the Italians was the first Allied land victory of World War II and helped raise morale across occupied Europe. It forced Hitler to delay his invasion of the Soviet Union to secure his southern flank by invading Greece, a decision that would prove costly when German forces faced the Russian winter.</p>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg shadow-sm p-8">
+                        <h2 class="text-3xl font-bold mb-6">The Battle of Pindus</h2>
+                        <p class="text-lg mb-6">The Battle of Pindus was the first major engagement of the Greco-Italian War. The Italian Julia Alpine Division, elite mountain troops, attempted to advance through the Pindus Mountains toward Metsovo to cut Greek forces in half. They were met with fierce resistance from the Greek 4th Infantry Division and local civilians.</p>
+                        
+                        <div class="my-8">
+                            <img src="https://readdy.ai/api/search-image?query=A%20dramatic%20black%20and%20white%20historical%20photograph%20showing%20Greek%20soldiers%20defending%20mountain%20positions%20in%20the%20Pindus%20Mountains%20during%20winter%201940-41.%20The%20image%20shows%20soldiers%20in%20winter%20gear%20with%20rifles%20positioned%20among%20snow-covered%20rocks%20and%20trees.%20The%20photograph%20captures%20the%20harsh%20winter%20conditions%20with%20soldiers%20breath%20visible%20in%20the%20cold%20air.%20The%20image%20has%20authentic%20period%20details%20with%20a%20documentary%20style%2C%20high%20contrast%20and%20film%20grain%20texture.&width=800&height=500&seq=3&orientation=landscape" alt="Greek soldiers in the Pindus Mountains, 1940" class="w-full h-auto rounded-lg mb-2">
+                            <p class="text-sm text-gray-600 italic">Greek soldiers defending positions in the snow-covered Pindus Mountains, November 1940.</p>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-4">The Role of Civilian Volunteers</h3>
+                        <p class="mb-6">One of the most remarkable aspects of the Greek defense was the role played by civilian volunteers, particularly women from local villages. These women, known as the "women of Pindus," carried ammunition, food, and supplies to the front lines and evacuated the wounded, often under enemy fire.</p>
+                        
+                        <p class="mb-6">By November 13, 1940, the Julia Division was encircled and forced to retreat with heavy losses. The Greek victory at Pindus was a significant blow to Italian morale and demonstrated the effectiveness of Greek mountain warfare tactics against a numerically superior force.</p>
+                    </article>
+                </div>
+                
+                <!-- Right Column: Supporting Elements -->
+                <div class="md:w-1/3">
+                    <!-- Interactive Map -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h3 class="text-xl font-bold mb-4">Italian Invasion & Greek Counteroffensive</h3>
+                        <div class="relative h-80 bg-cover bg-center rounded" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');">
+                            <div class="absolute top-3 right-3 flex space-x-2">
+                                <button class="w-8 h-8 flex items-center justify-center bg-white rounded shadow !rounded-button whitespace-nowrap">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                                <button class="w-8 h-8 flex items-center justify-center bg-white rounded shadow !rounded-button whitespace-nowrap">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-3 bg-white px-3 py-1 rounded text-sm">
+                                <span>Oct 1940 - Apr 1941</span>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-medium">Timeline:</span>
+                                <span class="text-sm text-gray-600">March 1941</span>
+                            </div>
+                            <input type="range" min="1" max="7" value="5" class="w-full h-2 bg-gray-200 rounded appearance-none">
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>Oct 1940</span>
+                                <span>Apr 1941</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Historical Document -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h3 class="text-xl font-bold mb-4">Historical Documents</h3>
+                        <div class="document-card relative mb-4 group">
+                            <img src="https://readdy.ai/api/search-image?query=A%20black%20and%20white%20scan%20of%20the%20Italian%20ultimatum%20document%20to%20Greece%20from%201940%2C%20showing%20official%20letterhead%2C%20typed%20text%20in%20Italian%2C%20and%20signatures.%20The%20document%20appears%20aged%20with%20slight%20creases%20and%20official%20stamps.%20The%20image%20should%20have%20high%20detail%20to%20show%20the%20texture%20of%20the%20paper%20and%20ink.%20The%20photograph%20has%20a%20documentary%20style%20with%20clear%20focus%20on%20the%20text%20content.&width=400&height=500&seq=4&orientation=portrait" alt="Italian Ultimatum to Greece" class="w-full h-auto rounded-lg">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                                <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+                                    <i class="ri-zoom-in-line text-xl"></i>
+                                </div>
+                            </div>
+                            <h4 class="font-semibold mt-3">Italian Ultimatum to Greece</h4>
+                            <p class="text-sm text-gray-600">October 28, 1940</p>
+                        </div>
+                        <div class="document-card relative group">
+                            <img src="https://readdy.ai/api/search-image?query=A%20black%20and%20white%20scan%20of%20a%20Greek%20newspaper%20front%20page%20from%20October%2029%2C%201940%2C%20with%20bold%20headlines%20announcing%20Greeces%20rejection%20of%20the%20Italian%20ultimatum%20and%20the%20beginning%20of%20war.%20The%20newspaper%20should%20have%20Greek%20text%2C%20dramatic%20headlines%2C%20and%20possibly%20a%20small%20photograph.%20The%20image%20should%20show%20the%20authentic%20vintage%20newspaper%20format%20with%20columns%20and%20masthead.%20The%20photograph%20has%20a%20documentary%20style%20showing%20the%20texture%20and%20aging%20of%20the%20paper.&width=400&height=500&seq=5&orientation=portrait" alt="Greek Newspaper Announcing War" class="w-full h-auto rounded-lg">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                                <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+                                    <i class="ri-zoom-in-line text-xl"></i>
+                                </div>
+                            </div>
+                            <h4 class="font-semibold mt-3">Greek Newspaper Front Page</h4>
+                            <p class="text-sm text-gray-600">October 29, 1940</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Statistics -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h3 class="text-xl font-bold mb-4">War Statistics</h3>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-sm text-gray-600 mb-2">FORCES COMPARISON</h4>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm">Italian Forces</span>
+                                <span class="text-sm font-medium">565,000 troops</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+                                <div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm">Greek Forces</span>
+                                <span class="text-sm font-medium">260,000 troops</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+                                <div class="bg-primary h-2 rounded-full" style="width: 32%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm text-gray-600 mb-2">CASUALTIES</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="border border-gray-200 rounded p-3 text-center">
+                                    <span class="block text-2xl font-bold text-primary">13,755</span>
+                                    <span class="text-xs text-gray-600">Greek soldiers killed</span>
+                                </div>
+                                <div class="border border-gray-200 rounded p-3 text-center">
+                                    <span class="block text-2xl font-bold text-primary">25,067</span>
+                                    <span class="text-xs text-gray-600">Italian soldiers killed</span>
+                                </div>
+                                <div class="border border-gray-200 rounded p-3 text-center">
+                                    <span class="block text-2xl font-bold text-primary">42,485</span>
+                                    <span class="text-xs text-gray-600">Greek wounded</span>
+                                </div>
+                                <div class="border border-gray-200 rounded p-3 text-center">
+                                    <span class="block text-2xl font-bold text-primary">50,874</span>
+                                    <span class="text-xs text-gray-600">Italian wounded</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Key Figures -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-xl font-bold mb-4">Key Historical Figures</h3>
+                        <div class="flex items-center mb-4 pb-4 border-b border-gray-100">
+                            <img src="https://readdy.ai/api/search-image?query=A%20formal%20black%20and%20white%20portrait%20photograph%20of%20Greek%20Prime%20Minister%20Ioannis%20Metaxas%20from%201940%2C%20showing%20him%20in%20a%20suit%20with%20a%20serious%20expression.%20The%20photograph%20should%20be%20a%20professional%20headshot%20in%20the%20style%20of%20official%20government%20portraits%20from%20that%20era%2C%20with%20clear%20focus%20on%20his%20face%20and%20formal%20attire.%20The%20image%20has%20a%20documentary%20style%20with%20the%20authentic%20vintage%20photography%20quality%20of%20the%20period.&width=100&height=100&seq=6&orientation=squarish" alt="Ioannis Metaxas" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-semibold">Ioannis Metaxas</h4>
+                                <p class="text-sm text-gray-600">Prime Minister of Greece (1936-1941)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4 pb-4 border-b border-gray-100">
+                            <img src="https://readdy.ai/api/search-image?query=A%20formal%20black%20and%20white%20portrait%20photograph%20of%20Italian%20dictator%20Benito%20Mussolini%20from%201940%2C%20showing%20him%20in%20his%20military%20uniform%20with%20a%20stern%20expression.%20The%20photograph%20should%20be%20a%20professional%20headshot%20in%20the%20style%20of%20official%20government%20portraits%20from%20that%20era%2C%20with%20clear%20focus%20on%20his%20face%20and%20military%20attire%20with%20decorations.%20The%20image%20has%20a%20documentary%20style%20with%20the%20authentic%20vintage%20photography%20quality%20of%20the%20period.&width=100&height=100&seq=7&orientation=squarish" alt="Benito Mussolini" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-semibold">Benito Mussolini</h4>
+                                <p class="text-sm text-gray-600">Italian Dictator (1922-1943)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=A%20formal%20black%20and%20white%20portrait%20photograph%20of%20Greek%20General%20Alexandros%20Papagos%20from%201940%2C%20showing%20him%20in%20his%20military%20uniform%20with%20medals%20and%20decorations.%20The%20photograph%20should%20be%20a%20professional%20headshot%20in%20the%20style%20of%20official%20military%20portraits%20from%20that%20era%2C%20with%20clear%20focus%20on%20his%20face%20and%20military%20attire.%20The%20image%20has%20a%20documentary%20style%20with%20the%20authentic%20vintage%20photography%20quality%20of%20the%20period.&width=100&height=100&seq=8&orientation=squarish" alt="Alexandros Papagos" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-semibold">Alexandros Papagos</h4>
+                                <p class="text-sm text-gray-600">Commander-in-Chief of Greek Forces</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multimedia Gallery -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Historical Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=A%20powerful%20black%20and%20white%20historical%20photograph%20showing%20Greek%20soldiers%20celebrating%20victory%20after%20capturing%20an%20Italian%20position%20in%20Albania%2C%20winter%201940-41.%20The%20image%20shows%20jubilant%20soldiers%20with%20captured%20Italian%20equipment%20and%20flags.%20The%20photograph%20should%20have%20authentic%20period%20details%20with%20soldiers%20in%20Greek%20military%20uniforms.%20The%20image%20has%20a%20documentary%20style%20with%20high%20contrast%20and%20film%20grain%20texture.&width=400&height=300&seq=9&orientation=landscape" alt="Greek soldiers celebrating victory" class="w-full h-64 object-cover object-top">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="ri-zoom-in-line text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">Greek Soldiers After Capturing Italian Position</h3>
+                        <p class="text-sm text-gray-600">Northern Epirus (Southern Albania), December 1940</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=A%20dramatic%20black%20and%20white%20historical%20photograph%20showing%20Greek%20civilians%20in%20Athens%20celebrating%20the%20early%20victories%20against%20Italian%20forces%2C%20with%20crowds%20waving%20Greek%20flags%20and%20cheering%20in%20the%20streets.%20The%20image%20should%20capture%20the%20jubilant%20atmosphere%20with%20people%20of%20all%20ages%20participating.%20The%20photograph%20should%20have%20authentic%20period%20details%20of%201940s%20Athens%20with%20urban%20architecture%20visible.%20The%20image%20has%20a%20documentary%20style%20with%20high%20contrast%20and%20film%20grain%20texture.&width=400&height=300&seq=10&orientation=landscape" alt="Civilians celebrating in Athens" class="w-full h-64 object-cover object-top">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="ri-zoom-in-line text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">Civilians Celebrating Greek Victories</h3>
+                        <p class="text-sm text-gray-600">Athens, November 1940</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=A%20somber%20black%20and%20white%20historical%20photograph%20showing%20captured%20Italian%20soldiers%20being%20marched%20through%20a%20Greek%20mountain%20village%20under%20Greek%20military%20escort.%20The%20image%20should%20show%20a%20long%20line%20of%20prisoners%20walking%20through%20a%20narrow%20village%20street%20with%20Greek%20civilians%20watching.%20The%20photograph%20should%20have%20authentic%20period%20details%20with%20both%20Italian%20and%20Greek%20military%20uniforms%20visible.%20The%20image%20has%20a%20documentary%20style%20with%20high%20contrast%20and%20film%20grain%20texture.&width=400&height=300&seq=11&orientation=landscape" alt="Italian prisoners of war" class="w-full h-64 object-cover object-top">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="ri-zoom-in-line text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">Italian Prisoners of War</h3>
+                        <p class="text-sm text-gray-600">Epirus Region, January 1941</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=A%20detailed%20black%20and%20white%20historical%20photograph%20showing%20Greek%20artillery%20units%20firing%20at%20Italian%20positions%20in%20the%20mountains%2C%20with%20soldiers%20operating%20mountain%20howitzers%20in%20snowy%20conditions.%20The%20image%20should%20capture%20the%20difficult%20terrain%20with%20soldiers%20working%20together%20to%20position%20and%20fire%20the%20artillery.%20The%20photograph%20should%20have%20authentic%20period%20details%20with%20Greek%20military%20uniforms%20and%20equipment.%20The%20image%20has%20a%20documentary%20style%20with%20high%20contrast%20and%20film%20grain%20texture.&width=400&height=300&seq=12&orientation=landscape" alt="Greek artillery in mountains" class="w-full h-64 object-cover object-top">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="ri-zoom-in-line text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">Greek Artillery in Mountain Warfare</h3>
+                        <p class="text-sm text-gray-600">Pindus Mountains, December 1940</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=A%20poignant%20black%20and%20white%20historical%20photograph%20showing%20Greek%20women%20from%20mountain%20villages%20carrying%20supplies%20and%20ammunition%20to%20soldiers%20at%20the%20front%20lines%20in%20winter%20conditions.%20The%20image%20should%20show%20women%20in%20traditional%20Greek%20mountain%20clothing%20carrying%20heavy%20loads%20through%20snow%2C%20with%20mountains%20in%20the%20background.%20The%20photograph%20should%20have%20authentic%20period%20details%20showing%20the%20civilian%20contribution%20to%20the%20war%20effort.%20The%20image%20has%20a%20documentary%20style%20with%20high%20contrast%20and%20film%20grain%20texture.&width=400&height=300&seq=13&orientation=landscape" alt="Women of Pindus carrying supplies" class="w-full h-64 object-cover object-top">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="ri-zoom-in-line text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">The Women of Pindus</h3>
+                        <p class="text-sm text-gray-600">Pindus Mountains, November 1940</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden group">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center justify-center bg-gray-900">
+                            <i class="ri-film-line text-white text-5xl"></i>
+                        </div>
+                        <img src="https://readdy.ai/api/search-image?query=A%20film%20still%20from%20historical%20footage%20showing%20Greek%20troops%20advancing%20through%20captured%20Italian%20positions%20with%20mountains%20in%20background.%20The%20image%20should%20appear%20as%20a%20frame%20from%20a%20black%20and%20white%20newsreel%20with%20slightly%20lower%20quality%20than%20photographs%2C%20showing%20movement%20of%20troops.%20The%20photograph%20should%20have%20authentic%20period%20details%20with%20Greek%20military%20uniforms%20and%20captured%20Italian%20equipment%20visible.%20The%20image%20has%20a%20documentary%20style%20with%20the%20characteristic%20quality%20of%201940s%20film%20footage.&width=400&height=300&seq=14&orientation=landscape" alt="Historical footage of Greek advance" class="w-full h-64 object-cover object-top opacity-60">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="ri-play-fill text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">Historical Footage: Greek Advance</h3>
+                        <p class="text-sm text-gray-600">Allied Newsreel, February 1941</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-white border border-gray-300 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-50 transition !rounded-button whitespace-nowrap">View Full Gallery</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Documents Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Historical Documents</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-sm p-5 document-card group">
+                    <div class="relative mb-4">
+                        <img src="https://readdy.ai/api/search-image?query=A%20black%20and%20white%20scan%20of%20a%20military%20order%20document%20from%20the%20Greek%20Army%20headquarters%20dated%20November%201940%2C%20showing%20official%20letterhead%2C%20typed%20text%20in%20Greek%2C%20and%20military%20stamps.%20The%20document%20appears%20aged%20with%20slight%20creases%20and%20official%20signatures.%20The%20image%20should%20have%20high%20detail%20to%20show%20the%20texture%20of%20the%20paper%20and%20ink.%20The%20photograph%20has%20a%20documentary%20style%20with%20clear%20focus%20on%20the%20text%20content.&width=300&height=400&seq=15&orientation=portrait" alt="Greek Military Order" class="w-full h-auto rounded-lg">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+                                <i class="ri-zoom-in-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold mb-2">Military Order: Counteroffensive</h3>
+                    <p class="text-sm text-gray-600 mb-3">November 14, 1940</p>
+                    <p class="text-sm">Order from General Papagos initiating the Greek counteroffensive against Italian forces in Albania.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm p-5 document-card group">
+                    <div class="relative mb-4">
+                        <img src="https://readdy.ai/api/search-image?query=A%20black%20and%20white%20scan%20of%20a%20personal%20letter%20from%20a%20Greek%20soldier%20at%20the%20front%20to%20his%20family%2C%20handwritten%20in%20Greek%20on%20simple%20paper.%20The%20letter%20appears%20worn%20with%20fold%20marks%20and%20possibly%20some%20staining.%20The%20image%20should%20have%20high%20detail%20to%20show%20the%20texture%20of%20the%20paper%20and%20handwriting.%20The%20photograph%20has%20a%20documentary%20style%20with%20clear%20focus%20on%20the%20text%20content.&width=300&height=400&seq=16&orientation=portrait" alt="Soldier's Letter" class="w-full h-auto rounded-lg">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+                                <i class="ri-zoom-in-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold mb-2">Soldier's Letter Home</h3>
+                    <p class="text-sm text-gray-600 mb-3">December 25, 1940</p>
+                    <p class="text-sm">Personal letter from Corporal Dimitrios Papadopoulos to his family in Athens describing conditions at the front.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm p-5 document-card group">
+                    <div class="relative mb-4">
+                        <img src="https://readdy.ai/api/search-image?query=A%20black%20and%20white%20scan%20of%20a%20British%20diplomatic%20cable%20regarding%20the%20Greek%20war%20effort%2C%20showing%20official%20Foreign%20Office%20letterhead%2C%20typed%20text%20in%20English%2C%20and%20classification%20markings.%20The%20document%20appears%20official%20with%20stamps%20and%20signatures.%20The%20image%20should%20have%20high%20detail%20to%20show%20the%20texture%20of%20the%20paper%20and%20typewriter%20text.%20The%20photograph%20has%20a%20documentary%20style%20with%20clear%20focus%20on%20the%20text%20content.&width=300&height=400&seq=17&orientation=portrait" alt="British Diplomatic Cable" class="w-full h-auto rounded-lg">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+                                <i class="ri-zoom-in-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold mb-2">British Diplomatic Cable</h3>
+                    <p class="text-sm text-gray-600 mb-3">January 8, 1941</p>
+                    <p class="text-sm">Confidential communication from the British Foreign Office regarding military aid to Greece.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm p-5 document-card group">
+                    <div class="relative mb-4">
+                        <img src="https://readdy.ai/api/search-image?query=A%20black%20and%20white%20scan%20of%20an%20Italian%20propaganda%20leaflet%20dropped%20over%20Greek%20positions%2C%20showing%20both%20Italian%20and%20Greek%20text%20with%20simple%20illustrations.%20The%20leaflet%20appears%20to%20be%20a%20surrender%20appeal%20with%20some%20patriotic%20imagery.%20The%20image%20should%20have%20high%20detail%20to%20show%20the%20texture%20of%20the%20paper%20and%20printing%20quality.%20The%20photograph%20has%20a%20documentary%20style%20with%20clear%20focus%20on%20the%20content.&width=300&height=400&seq=18&orientation=portrait" alt="Italian Propaganda Leaflet" class="w-full h-auto rounded-lg">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full opacity-0 zoom-icon transition-opacity duration-300">
+                                <i class="ri-zoom-in-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold mb-2">Italian Propaganda Leaflet</h3>
+                    <p class="text-sm text-gray-600 mb-3">February 1941</p>
+                    <p class="text-sm">Leaflet dropped by Italian aircraft over Greek positions urging surrender.</p>
+                </div>
+            </div>
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold mb-6">Document Archive</h3>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="relative w-64">
+                                <input type="text" class="w-full bg-gray-100 rounded-full py-2 pl-10 pr-4 text-sm search-input border-none" placeholder="Search documents...">
+                                <div class="absolute left-3 top-2.5 w-4 h-4 flex items-center justify-center text-gray-400">
+                                    <i class="ri-search-line"></i>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <button class="flex items-center space-x-2 bg-gray-100 px-4 py-2 rounded-full text-sm !rounded-button whitespace-nowrap">
+                                    <span>Filter</span>
+                                    <i class="ri-filter-3-line"></i>
+                                </button>
+                                <button class="flex items-center space-x-2 bg-gray-100 px-4 py-2 rounded-full text-sm !rounded-button whitespace-nowrap">
+                                    <span>Sort by Date</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="text-left text-sm text-gray-600 border-b border-gray-200">
+                                        <th class="pb-3 font-medium">Document Title</th>
+                                        <th class="pb-3 font-medium">Date</th>
+                                        <th class="pb-3 font-medium">Type</th>
+                                        <th class="pb-3 font-medium">Source</th>
+                                        <th class="pb-3 font-medium">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+                                                    <i class="ri-file-text-line text-gray-600"></i>
+                                                </div>
+                                                <span>Metaxas' Diary Entry on Italian Ultimatum</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 text-sm">October 28, 1940</td>
+                                        <td class="py-4 text-sm">Personal Document</td>
+                                        <td class="py-4 text-sm">Metaxas Family Archive</td>
+                                        <td class="py-4">
+                                            <div class="flex space-x-2">
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-eye-line text-gray-600"></i>
+                                                </button>
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-download-line text-gray-600"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+                                                    <i class="ri-file-text-line text-gray-600"></i>
+                                                </div>
+                                                <span>First Battle Report from Pindus Front</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 text-sm">November 2, 1940</td>
+                                        <td class="py-4 text-sm">Military Document</td>
+                                        <td class="py-4 text-sm">Greek Army Archives</td>
+                                        <td class="py-4">
+                                            <div class="flex space-x-2">
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-eye-line text-gray-600"></i>
+                                                </button>
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-download-line text-gray-600"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+                                                    <i class="ri-file-text-line text-gray-600"></i>
+                                                </div>
+                                                <span>Churchill's Letter to Metaxas</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 text-sm">December 15, 1940</td>
+                                        <td class="py-4 text-sm">Diplomatic Correspondence</td>
+                                        <td class="py-4 text-sm">British National Archives</td>
+                                        <td class="py-4">
+                                            <div class="flex space-x-2">
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-eye-line text-gray-600"></i>
+                                                </button>
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-download-line text-gray-600"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+                                                    <i class="ri-file-text-line text-gray-600"></i>
+                                                </div>
+                                                <span>Mussolini's Orders for Reinforcements</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 text-sm">January 5, 1941</td>
+                                        <td class="py-4 text-sm">Military Document</td>
+                                        <td class="py-4 text-sm">Italian State Archives</td>
+                                        <td class="py-4">
+                                            <div class="flex space-x-2">
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-eye-line text-gray-600"></i>
+                                                </button>
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-download-line text-gray-600"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded mr-3">
+                                                    <i class="ri-file-text-line text-gray-600"></i>
+                                                </div>
+                                                <span>Greek Intelligence Report on German Preparations</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 text-sm">March 20, 1941</td>
+                                        <td class="py-4 text-sm">Intelligence Document</td>
+                                        <td class="py-4 text-sm">Greek Ministry of Defense</td>
+                                        <td class="py-4">
+                                            <div class="flex space-x-2">
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-eye-line text-gray-600"></i>
+                                                </button>
+                                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                                    <i class="ri-download-line text-gray-600"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center">
+                            <div class="text-sm text-gray-600">
+                                Showing 5 of 124 documents
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                    <i class="ri-arrow-left-s-line"></i>
+                                </button>
+                                <button class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded !rounded-button whitespace-nowrap">1</button>
+                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">2</button>
+                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">3</button>
+                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                    <i class="ri-more-line"></i>
+                                </button>
+                                <button class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded !rounded-button whitespace-nowrap">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Greece in WWII</h3>
+                    <p class="text-gray-400 mb-6">A comprehensive historical archive documenting Greece's role in the Second World War from 1936 to 1949.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-twitter-x-fill"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Historical Periods</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Pre-war Greece (1936-1940)</a></li>
+                        <li><a href="#" class="hover:text-white transition">Italian War (1940-1941)</a></li>
+                        <li><a href="#" class="hover:text-white transition">German Occupation (1941-1944)</a></li>
+                        <li><a href="#" class="hover:text-white transition">Resistance Movement (1942-1944)</a></li>
+                        <li><a href="#" class="hover:text-white transition">Civil War (1944-1949)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Historical Documents</a></li>
+                        <li><a href="#" class="hover:text-white transition">Photograph Archive</a></li>
+                        <li><a href="#" class="hover:text-white transition">Video Footage</a></li>
+                        <li><a href="#" class="hover:text-white transition">Interactive Maps</a></li>
+                        <li><a href="#" class="hover:text-white transition">Oral Histories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Stay Updated</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to receive updates on new historical content and exhibits.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email address" class="bg-gray-800 rounded-l-full py-2 px-4 text-sm w-full border-none">
+                        <button class="bg-primary text-white rounded-r-full px-4 hover:bg-red-800 transition !rounded-button whitespace-nowrap">Subscribe</button>
+                    </div>
+                    <div class="mt-6">
+                        <label class="custom-checkbox flex items-center text-sm text-gray-400">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="ml-6">I agree to receive newsletter emails</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-500 text-sm mb-4 md:mb-0">
+                    © 2025 Greece in WWII Historical Archive. All rights reserved.
+                </div>
+                <div class="flex space-x-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Use</a>
+                    <a href="#" class="hover:text-white transition">Contact Us</a>
+                    <a href="#" class="hover:text-white transition">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="timelineInteraction">
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            timelineItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    timelineItems.forEach(i => i.classList.remove('active'));
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+
+    <script id="documentZoom">
+        document.addEventListener('DOMContentLoaded', function() {
+            const documentCards = document.querySelectorAll('.document-card');
+            
+            documentCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // In a real implementation, this would open a modal with a zoomed view
+                    console.log('Document zoom functionality would be implemented here');
+                });
+            });
+        });
+    </script>
+
+    <script id="searchFunctionality">
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInputs = document.querySelectorAll('.search-input');
+            
+            searchInputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('ring-2', 'ring-primary', 'ring-opacity-50');
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.classList.remove('ring-2', 'ring-primary', 'ring-opacity-50');
+                });
+                
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        // In a real implementation, this would trigger a search
+                        console.log('Search for:', this.value);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="customFormControls">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom checkbox functionality
+            const customCheckboxes = document.querySelectorAll('.custom-checkbox input');
+            customCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    // Custom checkbox logic if needed
+                });
+            });
+            
+            // Custom switch functionality
+            const customSwitches = document.querySelectorAll('.custom-switch input');
+            customSwitches.forEach(switchEl => {
+                switchEl.addEventListener('change', function() {
+                    // Custom switch logic if needed
+                });
+            });
+        });
+    </script>
+</body>
+</html>
